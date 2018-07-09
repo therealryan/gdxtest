@@ -9,7 +9,7 @@ sourceSets.test.java.srcDirs = [ "src/test/java" ]
 dependencies {
 	compile project(":gdxtend")
 	compile "com.badlogicgames.gdx:gdx:$gdxVersion"
-	compile "junit:junit:4.11"
+	compile "junit:junit:4.12"
 	compile "org.mockito:mockito-core:1.+"
 	compile "org.assertj:assertj-core:1.7.1"
 	compile "org.jfree:jfreesvg:2.0"
