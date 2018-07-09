@@ -1,0 +1,23 @@
+apply plugin: "java"
+
+sourceCompatibility = 1.7
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+sourceSets.main.java.srcDirs = [ "src/main/java" ]
+sourceSets.test.java.srcDirs = [ "src/test/java" ]
+
+dependencies {
+	compile project(":gdxtend")
+	compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+	compile "junit:junit:4.11"
+	compile "org.mockito:mockito-core:1.+"
+	compile "org.assertj:assertj-core:1.7.1"
+	compile "org.jfree:jfreesvg:2.0"
+	compile "jfree:jfreechart:1.0.12"
+	compile "com.badlogicgames.gdx:gdx-backend-headless:$gdxVersion"
+	compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+}
+
+eclipse.project {
+    name = appName + "-gdxtest"
+}
