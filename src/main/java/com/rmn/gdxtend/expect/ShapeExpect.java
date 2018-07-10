@@ -30,7 +30,7 @@ public class ShapeExpect extends AbstractSketchExpect<ShapeExpect> {
 	 *          the shape to draw
 	 */
 	public void check( Shape shape ) {
-		shape = new Shape( shape ).pos.all().scale( scale, scale, scale ).apply();
+		shape = new Shape( shape ).pos().all().scale( scale, scale, scale ).apply();
 
 		float minX = Float.MAX_VALUE, maxX = -Float.MAX_VALUE;
 		float minY = Float.MAX_VALUE, maxY = -Float.MAX_VALUE;
@@ -38,10 +38,10 @@ public class ShapeExpect extends AbstractSketchExpect<ShapeExpect> {
 		// find bounds
 		for( int i = 0; i < shape.vertices(); i++ ) {
 			shape.index( i );
-			minX = Math.min( minX, shape.pos.x() );
-			minY = Math.min( minY, shape.pos.y() );
-			maxX = Math.max( maxX, shape.pos.x() );
-			maxY = Math.max( maxY, shape.pos.y() );
+			minX = Math.min( minX, shape.pos().x() );
+			minY = Math.min( minY, shape.pos().y() );
+			maxX = Math.max( maxX, shape.pos().x() );
+			maxY = Math.max( maxY, shape.pos().y() );
 		}
 
 		int width = (int) ( maxX - minX );
@@ -67,14 +67,14 @@ public class ShapeExpect extends AbstractSketchExpect<ShapeExpect> {
 		g.setColor( Color.black );
 		for( int i = 0; i < shape.indices.length; i += 3 ) {
 			shape.index( shape.indices[ i ] );
-			int ax = (int) ( shape.pos.x() - xfs );
-			int ay = (int) ( shape.pos.y() - yfs );
+			int ax = (int) ( shape.pos().x() - xfs );
+			int ay = (int) ( shape.pos().y() - yfs );
 			shape.index( shape.indices[ i + 1 ] );
-			int bx = (int) ( shape.pos.x() - xfs );
-			int by = (int) ( shape.pos.y() - yfs );
+			int bx = (int) ( shape.pos().x() - xfs );
+			int by = (int) ( shape.pos().y() - yfs );
 			shape.index( shape.indices[ i + 2 ] );
-			int cx = (int) ( shape.pos.x() - xfs );
-			int cy = (int) ( shape.pos.y() - yfs );
+			int cx = (int) ( shape.pos().x() - xfs );
+			int cy = (int) ( shape.pos().y() - yfs );
 
 			g.drawLine( ax, ay, bx, by );
 			g.drawLine( bx, by, cx, cy );

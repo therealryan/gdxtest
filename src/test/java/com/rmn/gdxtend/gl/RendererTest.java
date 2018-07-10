@@ -145,8 +145,8 @@ public class RendererTest extends GdxTest {
 		r.transform.translate( 10, 20, 30 );
 
 		Shape triangle =
-				new Shape( 1, Topology.triangles, VertexAttribute.Position() ).pos.xyz( 1, 2, 3 ).next().pos.xyz( 4, 5, 6 )
-						.next().pos.xyz( 7, 8, 9 );
+				new Shape( 1, Topology.triangles, VertexAttribute.Position() ).pos().xyz( 1, 2, 3 ).next().pos().xyz( 4, 5, 6 )
+						.next().pos().xyz( 7, 8, 9 );
 
 		r.add( State.build( None.instance ), triangle );
 

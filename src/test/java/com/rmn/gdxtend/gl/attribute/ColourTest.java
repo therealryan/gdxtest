@@ -23,17 +23,17 @@ public class ColourTest {
 	 */
 	@Test
 	public void fromColour() {
-		s.col.set( new Color( 0, 0, 0, 0 ) );
+		s.col().set( new Color( 0, 0, 0, 0 ) );
 		check( 0b0000_0000_0000_0000_0000_0000_0000_0000 );
-		s.col.set( Color.BLACK );
+		s.col().set( Color.BLACK );
 		check( 0b1111_1110_0000_0000_0000_0000_0000_0000 );
-		s.col.set( Color.RED );
+		s.col().set( Color.RED );
 		check( 0b1111_1110_0000_0000_0000_0000_1111_1111 );
-		s.col.set( Color.GREEN );
+		s.col().set( Color.GREEN );
 		check( 0b1111_1110_0000_0000_1111_1111_0000_0000 );
-		s.col.set( Color.BLUE );
+		s.col().set( Color.BLUE );
 		check( 0b1111_1110_1111_1111_0000_0000_0000_0000 );
-		s.col.set( Color.WHITE );
+		s.col().set( Color.WHITE );
 		check( 0b1111_1110_1111_1111_1111_1111_1111_1111 );
 	}
 
@@ -42,19 +42,19 @@ public class ColourTest {
 	 */
 	@Test
 	public void fromComponents() {
-		s.col.rgba( 0, 0, 0, 0 );
+		s.col().rgba( 0, 0, 0, 0 );
 		check( 0b0000_0000_0000_0000_0000_0000_0000_0000 );
-		s.col.rgba( 0, 0, 0, 1 );
+		s.col().rgba( 0, 0, 0, 1 );
 		check( 0b1111_1110_0000_0000_0000_0000_0000_0000 );
-		s.col.rgba( 0.5f, 0, 0, 1 );
+		s.col().rgba( 0.5f, 0, 0, 1 );
 		check( 0b1111_1110_0000_0000_0000_0000_0111_1111 );
-		s.col.rgba( 1, 0, 0, 1 );
+		s.col().rgba( 1, 0, 0, 1 );
 		check( 0b1111_1110_0000_0000_0000_0000_1111_1111 );
-		s.col.rgba( 0, 1, 0, 1 );
+		s.col().rgba( 0, 1, 0, 1 );
 		check( 0b1111_1110_0000_0000_1111_1111_0000_0000 );
-		s.col.rgba( 0, 0, 1, 1 );
+		s.col().rgba( 0, 0, 1, 1 );
 		check( 0b1111_1110_1111_1111_0000_0000_0000_0000 );
-		s.col.rgba( 1, 1, 1, 1 );
+		s.col().rgba( 1, 1, 1, 1 );
 		check( 0b1111_1110_1111_1111_1111_1111_1111_1111 );
 	}
 
@@ -63,32 +63,32 @@ public class ColourTest {
 	 */
 	@Test
 	public void individual() {
-		s.col.rgba( 0, 0, 0, 0 );
+		s.col().rgba( 0, 0, 0, 0 );
 		check( 0b0000_0000_0000_0000_0000_0000_0000_0000 );
 
-		s.col.r( 1 );
+		s.col().r( 1 );
 		check( 0b0000_0000_0000_0000_0000_0000_1111_1111 );
 
-		s.col.rgba( 0, 0, 0, 0 );
-		s.col.g( 1 );
+		s.col().rgba( 0, 0, 0, 0 );
+		s.col().g( 1 );
 		check( 0b0000_0000_0000_0000_1111_1111_0000_0000 );
 
-		s.col.rgba( 0, 0, 0, 0 );
-		s.col.b( 1 );
+		s.col().rgba( 0, 0, 0, 0 );
+		s.col().b( 1 );
 		check( 0b0000_0000_1111_1111_0000_0000_0000_0000 );
 
-		s.col.rgba( 0, 0, 0, 0 );
-		s.col.a( 1 );
+		s.col().rgba( 0, 0, 0, 0 );
+		s.col().a( 1 );
 		check( 0b1111_1110_0000_0000_0000_0000_0000_0000 );
 
-		s.col.rgba( 0, 0, 0, 0 );
-		s.col.r( 0.00625f );
+		s.col().rgba( 0, 0, 0, 0 );
+		s.col().r( 0.00625f );
 		check( 0b0000_0000_0000_0000_0000_0000_0000_0001 );
-		s.col.g( 0.00625f );
+		s.col().g( 0.00625f );
 		check( 0b0000_0000_0000_0000_0000_0001_0000_0001 );
-		s.col.b( 0.00625f );
+		s.col().b( 0.00625f );
 		check( 0b0000_0000_0000_0001_0000_0001_0000_0001 );
-		s.col.a( 0.00625f );
+		s.col().a( 0.00625f );
 		check( 0b0000_0001_0000_0001_0000_0001_0000_0001 );
 	}
 
@@ -108,7 +108,7 @@ public class ColourTest {
 	 */
 	@Test
 	public void all() {
-		Shape t = new Shape( 3, 0, ColorPacked() ).col.rgba( 1, 0, 0, 0 ).next().col.rgba( 0, 1, 0, 0 ).next().col
+		Shape t = new Shape( 3, 0, ColorPacked() ).col().rgba( 1, 0, 0, 0 ).next().col().rgba( 0, 1, 0, 0 ).next().col()
 				.rgba( 0, 0, 1, 0 ).next();
 
 		assertThat( t.vertexData ).isEqualTo( new float[] {
@@ -117,7 +117,7 @@ public class ColourTest {
 				Float.intBitsToFloat( 0b0000_0000_1111_1111_0000_0000_0000_0000 ),
 		} );
 
-		t.col.all().a( 1 );
+		t.col().all().a( 1 );
 
 		assertThat( t.vertexData ).isEqualTo( new float[] {
 				Float.intBitsToFloat( 0b1111_1110_0000_0000_0000_0000_1111_1111 ),

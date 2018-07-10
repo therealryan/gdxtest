@@ -60,21 +60,21 @@ public class ShapeTest {
 	public void vertexIndex() {
 		Shape s = new Shape( 3, 0, Position() );
 
-		s.pos.xyz( 1, 2, 3 ).next();
+		s.pos().xyz( 1, 2, 3 ).next();
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				1, 2, 3,
 				0, 0, 0,
 				0, 0, 0 } );
 
-		s.index( 2 ).pos.x( 4 );
+		s.index( 2 ).pos().x( 4 );
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				1, 2, 3,
 				0, 0, 0,
 				4, 0, 0 } );
 
-		s.index( 0 ).pos.z( 5 );
+		s.index( 0 ).pos().z( 5 );
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				1, 2, 5,
@@ -88,11 +88,12 @@ public class ShapeTest {
 	@Test
 	public void position() {
 		Shape s =
-				new Shape( 5, 0, Position() ).pos.xyz( 1, 2, 3 )
-						.next().pos.x( 4 ).done()
-								.next().pos.y( 5 ).done()
-										.next().pos.z( 6 ).done()
-												.next().pos.set( new Vector3( 7, 8, 9 ) );
+				new Shape( 5, 0, Position() )
+						.pos().xyz( 1, 2, 3 ).next()
+						.pos().x( 4 ).done()
+						.next().pos().y( 5 ).done()
+						.next().pos().z( 6 ).done()
+						.next().pos().set( new Vector3( 7, 8, 9 ) );
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				1, 2, 3,
@@ -110,31 +111,31 @@ public class ShapeTest {
 
 		Shape s = new Shape( 3, 0, Position() );
 
-		s.pos.all().xyz( 1, 2, 3 );
+		s.pos().all().xyz( 1, 2, 3 );
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				1, 2, 3,
 				1, 2, 3,
 				1, 2, 3, } );
 
-		s.pos.xyz( 4, 5, 6 );
+		s.pos().xyz( 4, 5, 6 );
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				4, 5, 6,
 				1, 2, 3,
 				1, 2, 3, } );
 
-		s.pos.all().x( 7 );
+		s.pos().all().x( 7 );
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				7, 5, 6,
 				7, 2, 3,
 				7, 2, 3, } );
 
-		s.pos.all().y( 8 );
+		s.pos().all().y( 8 );
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				7, 8, 6,
 				7, 8, 3,
 				7, 8, 3, } );
 
-		s.pos.all().z( 9 );
+		s.pos().all().z( 9 );
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				7, 8, 9,
 				7, 8, 9,
@@ -147,14 +148,14 @@ public class ShapeTest {
 	@Test
 	public void colour() {
 		Shape s =
-				new Shape( 3, 0, ColorPacked() ).col.set( Color.RED )
-						.next().col.rgba( 0.5f, 0.25f, 0.125f, 0.0625f )
-								.next().col
-										.r( 0.03125f )
-										.g( 0.015625f )
-										.b( 0.0078125f )
-										.a( 0.5f )
-										.done();
+				new Shape( 3, 0, ColorPacked() ).col().set( Color.RED )
+						.next().col().rgba( 0.5f, 0.25f, 0.125f, 0.0625f )
+						.next().col()
+						.r( 0.03125f )
+						.g( 0.015625f )
+						.b( 0.0078125f )
+						.a( 0.5f )
+						.done();
 
 		Color c = new Color( 0.0f, 1.0f, 0.0f, 0.0f );
 		assertThat( Integer.toHexString( c.toIntBits() ) ).isEqualTo( "ff00" );
@@ -174,7 +175,7 @@ public class ShapeTest {
 	@Test
 	public void allColour() {
 		Shape s =
-				new Shape( 3, 0, ColorPacked() ).col.all().set( Color.RED );
+				new Shape( 3, 0, ColorPacked() ).col().all().set( Color.RED );
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				Color.RED.toFloatBits(),
@@ -188,13 +189,15 @@ public class ShapeTest {
 	 */
 	@Test
 	public void colourAndPosition() {
-		Shape s = new Shape( 3, 0, Position(), ColorPacked() ).pos.xyz( 1, 2, 3 ).col.set( Color.RED )
-				.next().pos.xyz( 4, 5, 6 ).col.rgba( 0.5f, 0.25f, 0.125f, 0.0625f )
-						.next().pos.xyz( 7, 8, 9 ).col
-								.r( 0.03125f )
-								.g( 0.015625f )
-								.b( 0.0078125f )
-								.a( 0.5f ).done();
+		Shape s = new Shape( 3, 0, Position(), ColorPacked() )
+				.pos().xyz( 1, 2, 3 ).col().set( Color.RED ).next()
+				.pos().xyz( 4, 5, 6 ).col().rgba( 0.5f, 0.25f, 0.125f, 0.0625f ).next()
+				.pos().xyz( 7, 8, 9 ).col()
+				.r( 0.03125f )
+				.g( 0.015625f )
+				.b( 0.0078125f )
+				.a( 0.5f )
+				.done();
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				1, 2, 3,
@@ -206,7 +209,7 @@ public class ShapeTest {
 		} );
 
 		// check that global setters only affect their own components
-		s.pos.all().x( 8 );
+		s.pos().all().x( 8 );
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				8, 2, 3,
@@ -223,10 +226,10 @@ public class ShapeTest {
 	 */
 	@Test
 	public void transform() {
-		Shape s = new Shape( 3, 0, Position() ).pos.xyz( 1, 2, 3 )
-				.next().pos.xyz( 4, 5, 6 )
-						.next().pos.xyz( 7, 8, 9 )
-								.next();
+		Shape s = new Shape( 3, 0, Position() )
+				.pos().xyz( 1, 2, 3 ).next()
+				.pos().xyz( 4, 5, 6 ).next()
+				.pos().xyz( 7, 8, 9 ).next();
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				1, 2, 3, 4, 5, 6, 7, 8, 9,
@@ -234,15 +237,15 @@ public class ShapeTest {
 
 		s.index( 0 );
 
-		s.pos.scale( 2, 2, 1 ).apply().next();
-		s.pos.scale( 3, 1, 3 ).apply().next();
-		s.pos.scale( 1, 4, 4 ).apply().next();
+		s.pos().scale( 2, 2, 1 ).apply().next();
+		s.pos().scale( 3, 1, 3 ).apply().next();
+		s.pos().scale( 1, 4, 4 ).apply().next();
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				2, 4, 3, 12, 5, 18, 7, 32, 36,
 		} );
 
-		s.pos.all().scale( 2, 2, 2 ).apply();
+		s.pos().all().scale( 2, 2, 2 ).apply();
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				4, 8, 6, 24, 10, 36, 14, 64, 72,
@@ -257,6 +260,6 @@ public class ShapeTest {
 		Shape s = new Shape( 3, 1, Position() );
 
 		// we don't have the colour attribute
-		s.col.set( Color.RED );
+		s.col().set( Color.RED );
 	}
 }
