@@ -1,2 +1,3 @@
 # gdxtest
-Test libs and classes useful when testing libgdx projects that use gdxtend
+
+Contains tests for `gdxtend` and provides classes that are useful when testing `gdxtend`-using projects.

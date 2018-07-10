@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>sixLoop</title>
+		<script type="text/javascript" src="../src/test/resources/vis.min.js"></script>
+		<link href="../src/test/resources/vis.min.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="mynetwork"></div>
+		<script type="text/javascript">
+var container = document.getElementById('mynetwork');
+var data = { dot: 'digraph {0 -> 2[label=a];2 -> 1[label=a];1 -> 0[label=a];1 -> 2[label=b];2 -> 3[label=b];3 -> 1[label=b];2 -> 4[label=c];4 -> 3[label=c];3 -> 2[label=c];3 -> 4[label=d];4 -> 5[label=d];5 -> 3[label=d];4 -> 0[label=e];0 -> 5[label=e];5 -> 4[label=e];5 -> 0[label=f];0 -> 1[label=f];1 -> 5[label=f];}' };
+var network = new vis.Network(container, data);
+		</script>
+	</body>
+</html>

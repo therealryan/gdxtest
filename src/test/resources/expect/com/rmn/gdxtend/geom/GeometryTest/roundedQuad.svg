@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:jfreesvg="http://www.jfree.org/jfreesvg/svg" width="624" height="624" text-rendering="auto" shape-rendering="auto">
+  <defs>
+  </defs>
+  <line x1="62" y1="62" x2="561" y2="62" style="stroke-width: 1.0;stroke: rgb(192,192,192);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="562" y1="62" x2="562" y2="561" style="stroke-width: 1.0;stroke: rgb(192,192,192);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="562" y1="562" x2="63" y2="562" style="stroke-width: 1.0;stroke: rgb(192,192,192);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="62" y1="562" x2="62" y2="63" style="stroke-width: 1.0;stroke: rgb(192,192,192);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <g transform="matrix(1,0,0,1,0,0)">
+    <text x="437" y="577" style="fill: rgb(192,192,192); fill-opacity: 1.0; font-family: sans-serif; font-size: 12px; " >5.0</text>
+  </g>
+  <g transform="matrix(1,0,0,1,0,0)">
+    <text x="565" y="437" style="fill: rgb(192,192,192); fill-opacity: 1.0; font-family: sans-serif; font-size: 12px; " >5.0</text>
+  </g>
+  <line x1="462" y1="62" x2="512" y2="75" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="512" y1="75" x2="548" y2="111" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="548" y1="111" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="62" x2="548" y2="111" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="548" y1="111" x2="562" y2="162" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="562" y1="162" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="62" x2="562" y2="162" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="562" y1="162" x2="562" y2="462" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="562" y1="462" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="62" x2="562" y2="462" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="562" y1="462" x2="548" y2="512" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="548" y1="512" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="62" x2="548" y2="512" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="548" y1="512" x2="512" y2="548" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="512" y1="548" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="62" x2="512" y2="548" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="512" y1="548" x2="462" y2="562" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="562" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="62" x2="462" y2="562" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="562" x2="162" y2="562" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="162" y1="562" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="62" x2="162" y2="562" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="162" y1="562" x2="111" y2="548" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="111" y1="548" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="62" x2="111" y2="548" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="111" y1="548" x2="75" y2="512" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="75" y1="512" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="62" x2="75" y2="512" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="75" y1="512" x2="62" y2="462" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="62" y1="462" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="62" x2="62" y2="462" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="62" y1="462" x2="62" y2="162" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="62" y1="162" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="62" x2="62" y2="162" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="62" y1="162" x2="75" y2="111" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="75" y1="111" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="62" x2="75" y2="111" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="75" y1="111" x2="111" y2="75" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="111" y1="75" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="462" y1="62" x2="111" y2="75" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="111" y1="75" x2="162" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+  <line x1="162" y1="62" x2="462" y2="62" style="stroke-width: 1.0;stroke: rgb(0,0,0);stroke-opacity: 1.0;" transform="matrix(1,0,0,1,0,0)" />
+</svg>

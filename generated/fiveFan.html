@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>fiveFan</title>
+		<script type="text/javascript" src="../src/test/resources/vis.min.js"></script>
+		<link href="../src/test/resources/vis.min.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="mynetwork"></div>
+		<script type="text/javascript">
+var container = document.getElementById('mynetwork');
+var data = { dot: 'digraph {0 -> 1[label=a];1 -> 2[label=a];2 -> 0[label=a];0 -> 2[label=b];2 -> 3[label=b];3 -> 0[label=b];0 -> 3[label=c];3 -> 4[label=c];4 -> 0[label=c];}' };
+var network = new vis.Network(container, data);
+		</script>
+	</body>
+</html>
