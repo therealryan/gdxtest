@@ -87,12 +87,12 @@ public class ShapeTest {
 	 */
 	@Test
 	public void position() {
-		Shape s = new Shape( 5, 0, Position() )
-				.pos.xyz( 1, 2, 3 ).next()
-				.pos.x( 4 ).done().next()
-				.pos.y( 5 ).done().next()
-				.pos.z( 6 ).done().next()
-				.pos.set( new Vector3( 7, 8, 9 ) );
+		Shape s =
+				new Shape( 5, 0, Position() ).pos.xyz( 1, 2, 3 )
+						.next().pos.x( 4 ).done()
+								.next().pos.y( 5 ).done()
+										.next().pos.z( 6 ).done()
+												.next().pos.set( new Vector3( 7, 8, 9 ) );
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				1, 2, 3,
@@ -147,13 +147,14 @@ public class ShapeTest {
 	@Test
 	public void colour() {
 		Shape s =
-				new Shape( 3, 0, ColorPacked() )
-				.col.set( Color.RED ).next()
-				.col.rgba( 0.5f, 0.25f, 0.125f, 0.0625f ).next()
-				.col.r( 0.03125f )
-						.g( 0.015625f )
-						.b( 0.0078125f )
-						.a( 0.5f ).done();
+				new Shape( 3, 0, ColorPacked() ).col.set( Color.RED )
+						.next().col.rgba( 0.5f, 0.25f, 0.125f, 0.0625f )
+								.next().col
+										.r( 0.03125f )
+										.g( 0.015625f )
+										.b( 0.0078125f )
+										.a( 0.5f )
+										.done();
 
 		Color c = new Color( 0.0f, 1.0f, 0.0f, 0.0f );
 		assertThat( Integer.toHexString( c.toIntBits() ) ).isEqualTo( "ff00" );
@@ -173,8 +174,7 @@ public class ShapeTest {
 	@Test
 	public void allColour() {
 		Shape s =
-				new Shape( 3, 0, ColorPacked() )
-				.col.all().set( Color.RED );
+				new Shape( 3, 0, ColorPacked() ).col.all().set( Color.RED );
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				Color.RED.toFloatBits(),
@@ -188,18 +188,13 @@ public class ShapeTest {
 	 */
 	@Test
 	public void colourAndPosition() {
-		Shape s = new Shape( 3, 0, Position(), ColorPacked() )
-				.pos.xyz( 1, 2, 3 )
-				.col.set( Color.RED )
-						.next()
-				.pos.xyz( 4, 5, 6 )
-				.col.rgba( 0.5f, 0.25f, 0.125f, 0.0625f )
-						.next()
-				.pos.xyz( 7, 8, 9 ).col
-						.r( 0.03125f )
-						.g( 0.015625f )
-						.b( 0.0078125f )
-						.a( 0.5f ).done();
+		Shape s = new Shape( 3, 0, Position(), ColorPacked() ).pos.xyz( 1, 2, 3 ).col.set( Color.RED )
+				.next().pos.xyz( 4, 5, 6 ).col.rgba( 0.5f, 0.25f, 0.125f, 0.0625f )
+						.next().pos.xyz( 7, 8, 9 ).col
+								.r( 0.03125f )
+								.g( 0.015625f )
+								.b( 0.0078125f )
+								.a( 0.5f ).done();
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				1, 2, 3,
@@ -228,10 +223,10 @@ public class ShapeTest {
 	 */
 	@Test
 	public void transform() {
-		Shape s = new Shape( 3, 0, Position() )
-				.pos.xyz( 1, 2, 3 ).next()
-				.pos.xyz( 4, 5, 6 ).next()
-				.pos.xyz( 7, 8, 9 ).next();
+		Shape s = new Shape( 3, 0, Position() ).pos.xyz( 1, 2, 3 )
+				.next().pos.xyz( 4, 5, 6 )
+						.next().pos.xyz( 7, 8, 9 )
+								.next();
 
 		assertThat( s.vertexData ).isEqualTo( new float[] {
 				1, 2, 3, 4, 5, 6, 7, 8, 9,

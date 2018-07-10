@@ -26,7 +26,6 @@ public class GdxTestRunner extends BlockJUnit4ClassRunner implements
 	 * @throws InitializationError
 	 *           ruh-roh
 	 */
-	@SuppressWarnings( "unused" )
 	public GdxTestRunner( Class<?> c ) throws InitializationError {
 		super( c );
 		HeadlessApplicationConfiguration conf =

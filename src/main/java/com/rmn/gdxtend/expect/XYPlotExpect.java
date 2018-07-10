@@ -51,8 +51,8 @@ public class XYPlotExpect extends AbstractSketchExpect<XYPlotExpect> {
 	}
 
 	/**
-	 * Sets the default config that will be returned to after each test and call
-	 * to {@link #reset()}
+	 * Sets the default config that will be returned to after each test and call to
+	 * {@link #reset()}
 	 *
 	 * @param gr
 	 *          A {@link XYPlotExpect}, configured as desired
@@ -233,8 +233,7 @@ public class XYPlotExpect extends AbstractSketchExpect<XYPlotExpect> {
 	}
 
 	/**
-	 * Creates a graph of the added plots and compares it against the expected
-	 * graph
+	 * Creates a graph of the added plots and compares it against the expected graph
 	 */
 	public void check() {
 		JFreeChart jfc = ChartFactory.createXYLineChart(
@@ -256,8 +255,7 @@ public class XYPlotExpect extends AbstractSketchExpect<XYPlotExpect> {
 	}
 
 	/**
-	 * Sometime you want to plot multiple values while only advancing a system
-	 * once
+	 * Sometime you want to plot multiple values while only advancing a system once
 	 */
 	public static interface Functions {
 		/**

@@ -133,10 +133,10 @@ public abstract class AbstractExpect<T extends AbstractExpect<T>> extends
 	}
 
 	/**
-	 * Compares an actual result against an expected result in a file. If the
-	 * expect file does not exist or if the regenerate property is set or the
-	 * {@link Regenerate} annotation is present, then the expected result file
-	 * will be overwritten with the actual result
+	 * Compares an actual result against an expected result in a file. If the expect
+	 * file does not exist or if the regenerate property is set or the
+	 * {@link Regenerate} annotation is present, then the expected result file will
+	 * be overwritten with the actual result
 	 *
 	 * @param actual
 	 *          the result

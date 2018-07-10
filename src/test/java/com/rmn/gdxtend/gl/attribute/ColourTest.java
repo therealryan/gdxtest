@@ -108,10 +108,8 @@ public class ColourTest {
 	 */
 	@Test
 	public void all() {
-		Shape t = new Shape( 3, 0, ColorPacked() )
-				.col.rgba( 1, 0, 0, 0 ).next()
-				.col.rgba( 0, 1, 0, 0 ).next()
-				.col.rgba( 0, 0, 1, 0 ).next();
+		Shape t = new Shape( 3, 0, ColorPacked() ).col.rgba( 1, 0, 0, 0 ).next().col.rgba( 0, 1, 0, 0 ).next().col
+				.rgba( 0, 0, 1, 0 ).next();
 
 		assertThat( t.vertexData ).isEqualTo( new float[] {
 				Float.intBitsToFloat( 0b0000_0000_0000_0000_0000_0000_1111_1111 ),
